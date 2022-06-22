@@ -33,8 +33,8 @@ const App = () => (
 
 				<Flex gap={8} flexWrap="wrap" justifyContent="center" padding={10} px={20}>
 					{FEATURES.map(
-						(feature: Feature): React.ReactNode => (
-							<AtomFeatureBox {...feature} />
+						(feature: Feature, index): React.ReactNode => (
+							<AtomFeatureBox {...feature} key={`${feature.title}-index`} />
 						)
 					)}
 				</Flex>

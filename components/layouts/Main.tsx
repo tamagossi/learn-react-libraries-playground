@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import { Box, Code, Container, Flex, Heading, Icon, Link, Spacer, Text } from '@chakra-ui/react';
-import { FaGithub, FaYoutube } from 'react-icons/fa';
+import { Box, Container, Flex, Heading, Spacer, Text } from '@chakra-ui/react';
 
 import { AtomColorModeSwitcher } from '../atoms';
 
@@ -50,17 +49,7 @@ const Layout = ({ children, title = 'This is the default title', subTitle }: Pro
 					<Container maxW={{ xl: '1200px' }}>
 						<Flex>
 							<Box>
-								<span>React Query Example</span>
-							</Box>
-							<Spacer />
-							<Box>
-								<Link href="https://github.com/sastranababan" isExternal mx={4}>
-									<Icon as={FaGithub} w={6} h={6} color="#24292e" />
-								</Link>
-								<Link href="https://www.youtube.com/sastranababan" isExternal>
-									<Icon as={FaYoutube} w={6} h={6} color="#c4302b" />
-								</Link>
-								<Code ml={4}>Sastra Nababan</Code>
+								<span>React Tutorial Collection</span>
 							</Box>
 						</Flex>
 					</Container>
