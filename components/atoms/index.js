@@ -1,3 +1,4 @@
 export { default as AtomColorModeSwitcher } from './ColorModeSwitcher';
-export { default as AtomLogo } from './Logo';
 export { default as AtomFeatureBox } from './FeatureBox';
+export { default as AtomLogo } from './Logo';
+export { default as AtomPercentageFormat } from './PercertageFormat';
