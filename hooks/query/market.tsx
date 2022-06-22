@@ -21,5 +21,5 @@ const getMarket = async (page: number = 1): Promise<Price[]> => {
 };
 
 export const useMarketQuery = (page: number = 1) => {
-	return useQuery('market', () => getMarket(page));
+	return useQuery(['market', page], () => getMarket(page));
 };
