@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { FC, ReactElement, useState } from 'react';
+import { QueryClient } from 'react-query';
+import { dehydrate } from 'react-query/hydration';
 import {
 	Badge,
 	Flex,
@@ -11,18 +13,35 @@ import {
 	Image,
 	Text,
 	Spinner,
-	Grid,
 	Button,
 	HStack,
 } from '@chakra-ui/react';
 
 import { Layout } from '@/components/layouts';
 import { AtomPercentageFormat } from '@/components/atoms';
-import { Price, useMarketQuery } from 'hooks/query/market';
+import { getMarket, Price, useMarketQuery } from 'hooks/query/market';
+
+interface MarketPagePropsInterface {
+	initialPrice: Price[];
+}
 
 const formatNumber = (number: number) => Intl.NumberFormat('id-Id').format(number);
 
-export default function Market() {
+// ------- SSR with initial data ------------
+// export async function getStaticProps() {
+// 	const initialPrice = await getMarket();
+// 	return { props: { initialPrice } };
+// }
+
+// ------- SSR with hydration ----------
+export async function getStaticProps() {
+	const queryClient = new QueryClient();
+	await queryClient.prefetchQuery(['market', 1], () => getMarket(1));
+
+	return { props: { dehydratedState: dehydrate } };
+}
+
+const MarketPage: FC = (): ReactElement => {
 	const [page, setPage] = useState(1);
 	const { data, isError, isLoading, isFetching, isSuccess } = useMarketQuery(page);
 
@@ -116,4 +135,6 @@ export default function Market() {
 			</HStack>
 		</Layout>
 	);
-}
+};
+
+export default MarketPage;

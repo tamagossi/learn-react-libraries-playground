@@ -11,7 +11,7 @@ export type Price = {
 	total_volume: number;
 };
 
-const getMarket = async (page: number = 1): Promise<Price[]> => {
+export const getMarket = async (page: number = 1): Promise<Price[]> => {
 	const URL = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=idr&per_page=10&page=${page}`;
 
 	const response = await fetch(URL);
@@ -20,6 +20,6 @@ const getMarket = async (page: number = 1): Promise<Price[]> => {
 	return await response.json();
 };
 
-export const useMarketQuery = (page: number = 1) => {
-	return useQuery(['market', page], () => getMarket(page));
+export const useMarketQuery = (page: number = 1, initialData?: Price[]) => {
+	return useQuery(['market', page], () => getMarket(page), { initialData });
 };

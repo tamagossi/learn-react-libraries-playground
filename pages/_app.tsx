@@ -10,11 +10,13 @@ const queryClient = new QueryClient();
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<QueryClientProvider client={queryClient}>
-			<ChakraProvider theme={theme}>
-				<Component {...pageProps} />
-			</ChakraProvider>
+			<Hydrate state={pageProps.dehydratedState}>
+				<ChakraProvider theme={theme}>
+					<Component {...pageProps} />
+				</ChakraProvider>
 
-			<ReactQueryDevtools />
+				<ReactQueryDevtools />
+			</Hydrate>
 		</QueryClientProvider>
 	);
 }
