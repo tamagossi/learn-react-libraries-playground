@@ -47,7 +47,7 @@ export const useSubmitMessage = ({ onSuccess, onSettled, onMutate, onError }: Mu
 		onMutate: async (data) => {
 			await queryClient.cancelQueries('mama-muda');
 
-			const previousMessage: Message[] = queryClient.getQueriesData<Message[]>('mama-muda');
+			const previousMessage = queryClient.getQueryData<Message[]>('mama-muda');
 
 			if (previousMessage) {
 				const newMessage = { ...data, createdAt: new Date().toISOString() };
@@ -57,13 +57,18 @@ export const useSubmitMessage = ({ onSuccess, onSettled, onMutate, onError }: Mu
 			}
 
 			if (onMutate) onMutate();
+
+			return { previousMessage };
 		},
 		onSuccess: async () => {
 			await queryClient.invalidateQueries('mama-muda');
 
 			if (onSuccess) onSuccess();
 		},
-		onError: () => {
+		onError: (error: any, _variables, context) => {
+			if (context?.previousMessage)
+				queryClient.setQueryData<Message[]>('mama-muda', context.previousMessage);
+
 			if (onError) onError();
 		},
 		onSettled: () => {
