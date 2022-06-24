@@ -1,4 +1,4 @@
-import { useQuery, UseQueryResult } from 'react-query';
+import { useQuery } from 'react-query';
 
 export type Price = {
 	current_price: number;

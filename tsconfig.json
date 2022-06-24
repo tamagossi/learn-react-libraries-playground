@@ -14,11 +14,8 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"strict": true,
-		"target": "es5",
-		"paths": {
-			"@/components/*": ["components/*"]
-		}
+		"target": "es5"
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "hooks/query/market.hook,tsx"],
 	"exclude": ["node_modules"]
 }

@@ -1,10 +1,10 @@
 import React, { FC, ReactElement } from 'react';
 import NextLink from 'next/link';
-import { Box, Text, Icon, Badge, useColorModeValue, useColorMode } from '@chakra-ui/react';
+import { Box, Text, Icon, Badge, useColorModeValue, useColorMode, HStack } from '@chakra-ui/react';
 
 import { Feature } from 'interfaces/features.interface';
 
-const AtomFeatureBox: FC<Feature> = ({ path, icon, title, tag }: Feature): ReactElement => {
+const AtomFeatureBox: FC<Feature> = ({ path, icon, title, tags }: Feature): ReactElement => {
 	const { colorMode } = useColorMode();
 
 	return (
@@ -37,7 +37,11 @@ const AtomFeatureBox: FC<Feature> = ({ path, icon, title, tag }: Feature): React
 					{title}
 				</Text>
 
-				<Badge>{tag}</Badge>
+				<HStack justifyContent="center">
+					{tags.map((tag) => {
+						return <Badge key={tag}>{tag}</Badge>;
+					})}
+				</HStack>
 			</Box>
 		</NextLink>
 	);

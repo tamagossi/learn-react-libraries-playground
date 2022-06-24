@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, Text, VStack, Grid, Flex } from '@chakra-ui/react';
 import { FcBullish, FcBusinesswoman } from 'react-icons/fc';
 
-import { AtomColorModeSwitcher, AtomFeatureBox, AtomLogo } from '@/components/atoms';
+import { AtomColorModeSwitcher, AtomFeatureBox, AtomLogo } from 'components/atoms';
 import { Feature } from 'interfaces/features.interface';
 
 const FEATURES: Feature[] = [
@@ -10,13 +10,13 @@ const FEATURES: Feature[] = [
 		path: '/react-query/crypto-market',
 		title: 'Crypto Market',
 		icon: FcBullish,
-		tag: 'react-query',
+		tags: ['react-query'],
 	},
 	{
 		path: '/react-query/mama-muda',
 		title: 'Mama Muda',
 		icon: FcBusinesswoman,
-		tag: 'react-query',
+		tags: ['react-query', 'hooks-form'],
 	},
 ];
 

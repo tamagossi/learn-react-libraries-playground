@@ -17,9 +17,9 @@ import {
 	HStack,
 } from '@chakra-ui/react';
 
-import { Layout } from '@/components/layouts';
-import { AtomPercentageFormat } from '@/components/atoms';
-import { getMarket, Price, useMarketQuery } from 'hooks/query/market';
+import { Layout } from 'components/layouts';
+import { AtomPercentageFormat } from 'components/atoms';
+import { getMarket, Price, useMarketQuery } from 'hooks/query/market.hook';
 
 interface MarketPagePropsInterface {
 	initialPrice: Price[];
