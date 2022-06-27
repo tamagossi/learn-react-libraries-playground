@@ -21,10 +21,6 @@ import { Layout } from 'components/layouts';
 import { AtomPercentageFormat } from 'components/atoms';
 import { getMarket, Price, useMarketQuery } from 'hooks/query/market.hook';
 
-interface MarketPagePropsInterface {
-	initialPrice: Price[];
-}
-
 const formatNumber = (number: number) => Intl.NumberFormat('id-Id').format(number);
 
 // ------- SSR with initial data ------------

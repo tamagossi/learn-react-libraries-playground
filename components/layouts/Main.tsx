@@ -37,7 +37,8 @@ const Layout = ({ children, title = 'This is the default title', subTitle }: Pro
 					<AtomColorModeSwitcher />
 				</Flex>
 
-				{children}
+				<Box minH="75vh">{children}</Box>
+
 				<Box
 					// position="fixed"
 					background={colorMode === 'dark' ? 'gray.800' : 'white'}

@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from 'react';
 import NextLink from 'next/link';
-import { Box, Text, Icon, Badge, useColorModeValue, useColorMode, HStack } from '@chakra-ui/react';
+import { Box, Text, Icon, Badge, useColorMode, HStack } from '@chakra-ui/react';
 
 import { Feature } from 'interfaces/features.interface';
 

@@ -62,6 +62,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 	setTimeout(() => {
 		res.setHeader('Content-Type', 'application/json');
+		res.setHeader('Cache-Control', 'public, max-age=604800');
 		res.statusCode = 200;
 		res.end(JSON.stringify(response));
 	}, 2000);

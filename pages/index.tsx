@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, Text, VStack, Grid, Flex } from '@chakra-ui/react';
-import { FcBullish, FcBusinesswoman } from 'react-icons/fc';
+import { FcBullish, FcBusinesswoman, FcSerialTasks } from 'react-icons/fc';
 
 import { AtomColorModeSwitcher, AtomFeatureBox, AtomLogo } from 'components/atoms';
 import { Feature } from 'interfaces/features.interface';
@@ -17,6 +17,12 @@ const FEATURES: Feature[] = [
 		title: 'Mama Muda',
 		icon: FcBusinesswoman,
 		tags: ['react-query', 'hooks-form'],
+	},
+	{
+		path: '/state-management/jotai',
+		title: 'Jotai',
+		icon: FcSerialTasks,
+		tags: ['state-management - jotai'],
 	},
 ];
 
