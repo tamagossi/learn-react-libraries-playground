@@ -20,10 +20,12 @@ const Layout = ({ children, title = 'This is the default title', subTitle }: Pro
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
+
 			<Container maxW={{ xl: '1200px' }} h="100vh">
-				<Flex pt={10} pb={24}>
+				<Flex pt={10} pb={10}>
 					<Box>
 						<Heading>{title}</Heading>
+
 						<Text
 							bgGradient="linear(to-l, #7928CA,#FF0080)"
 							bgClip="text"
@@ -37,7 +39,9 @@ const Layout = ({ children, title = 'This is the default title', subTitle }: Pro
 					<AtomColorModeSwitcher />
 				</Flex>
 
-				<Box minH="75vh">{children}</Box>
+				<Box minH="70vh" pb={10}>
+					{children}
+				</Box>
 
 				<Box
 					// position="fixed"

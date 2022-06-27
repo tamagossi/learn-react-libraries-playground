@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, Text, VStack, Grid, Flex } from '@chakra-ui/react';
-import { FcBullish, FcBusinesswoman, FcSerialTasks } from 'react-icons/fc';
+import { FcBullish, FcBusinesswoman, FcSerialTasks, FcSportsMode } from 'react-icons/fc';
 
 import { AtomColorModeSwitcher, AtomFeatureBox, AtomLogo } from 'components/atoms';
 import { Feature } from 'interfaces/features.interface';
@@ -22,7 +22,13 @@ const FEATURES: Feature[] = [
 		path: '/state-management/jotai',
 		title: 'Jotai',
 		icon: FcSerialTasks,
-		tags: ['state-management - jotai'],
+		tags: ['state-management | jotai'],
+	},
+	{
+		path: '/framer-motion/basic',
+		title: 'Basic Motion',
+		icon: FcSportsMode,
+		tags: ['framer-motion'],
 	},
 ];
 

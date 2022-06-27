@@ -34,7 +34,7 @@ export async function getStaticProps() {
 	const queryClient = new QueryClient();
 	await queryClient.prefetchQuery(['market', 1], () => getMarket(1));
 
-	return { props: { dehydratedState: dehydrate } };
+	return { props: { dehydratedState: dehydrate(queryClient) } };
 }
 
 const MarketPage: FC = (): ReactElement => {
