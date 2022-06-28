@@ -1,4 +1,4 @@
-import React, { FC, ReactElement, useState } from 'react';
+import React, { FC, ReactElement } from 'react';
 import { motion } from 'framer-motion';
 
 import styles from './box.module.css';

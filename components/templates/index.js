@@ -1,7 +1,7 @@
-export { default as BasicEventBox } from './BasicEventBox';
-export { default as BasicKeyframeBox } from './BasicKeyframeBox';
-export { default as BasicMotionBox } from './BasicMotionBox';
-export { default as BasicVariantBox } from './BasicVariantBox';
+export { default as BasicEventBox } from './basic-framer-motion/BasicEventBox';
+export { default as BasicKeyframeBox } from './basic-framer-motion/BasicKeyframeBox';
+export { default as BasicMotionBox } from './basic-framer-motion/BasicMotionBox';
+export { default as BasicVariantBox } from './basic-framer-motion/BasicVariantBox';
 
 export { default as MamaTable } from './mama-muda/MamaTable';
 export { default as StatusBadge } from './mama-muda/StatusBadge';

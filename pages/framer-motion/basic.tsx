@@ -1,9 +1,14 @@
 import React from 'react';
-import { Box, Divider, Text, VStack } from '@chakra-ui/react';
+import { Divider } from '@chakra-ui/react';
 
 import { AtomSectionTitle } from 'components/atoms';
 import { Layout } from 'components/layouts';
-import { BasicEventBox, BasicMotionBox, BasicVariantBox } from 'components/templates';
+import {
+	BasicEventBox,
+	BasicKeyframeBox,
+	BasicMotionBox,
+	BasicVariantBox,
+} from 'components/templates';
 
 const BasicFramerMotion = () => {
 	return (
@@ -20,6 +25,11 @@ const BasicFramerMotion = () => {
 
 			<AtomSectionTitle title="Basic Variant" />
 			<BasicVariantBox />
+
+			<Divider mt={10} mb={10} />
+
+			<AtomSectionTitle title="Basic Keyframe" />
+			<BasicKeyframeBox />
 		</Layout>
 	);
 };
