@@ -7,6 +7,7 @@ import {
 	BasicEventBox,
 	BasicKeyframeBox,
 	BasicMotionBox,
+	BasicUseAnimation,
 	BasicVariantBox,
 } from 'components/templates';
 
@@ -30,6 +31,10 @@ const BasicFramerMotion = () => {
 
 			<AtomSectionTitle title="Basic Keyframe" />
 			<BasicKeyframeBox />
+			<Divider mt={10} mb={10} />
+
+			<AtomSectionTitle title="Basic useAnimation" />
+			<BasicUseAnimation />
 		</Layout>
 	);
 };
