@@ -8,8 +8,6 @@ import { useTextState } from 'hooks/state/jotai/text.state';
 const SimpleStateCounter: FC = (): ReactElement => {
 	const { text, changeText, textLength } = useTextState();
 
-	console.log('rerender');
-
 	return (
 		<VStack>
 			<AtomSectionTitle title="Text Length with Derived State" />
