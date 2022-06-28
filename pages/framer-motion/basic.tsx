@@ -1,24 +1,19 @@
 import React from 'react';
 import { Box, Divider, Text, VStack } from '@chakra-ui/react';
 
+import { AtomSectionTitle } from 'components/atoms';
 import { Layout } from 'components/layouts';
 import { BasicEventBox, BasicMotionBox } from 'components/templates';
 
 const BasicFramerMotion = () => {
 	return (
 		<Layout title="🏃🏻 Framer Motion">
-			<Text fontSize="2xl" fontWeight="bold" mb="6">
-				Animate & Initial Props
-			</Text>
-
+			<AtomSectionTitle title="Animate & Initial Props" />
 			<BasicMotionBox />
 
 			<Divider mt={10} mb={10} />
 
-			<Text fontSize="2xl" fontWeight="bold" mb="6">
-				Basic Event Animation
-			</Text>
-
+			<AtomSectionTitle title="Basic Event Animation" />
 			<BasicEventBox />
 		</Layout>
 	);

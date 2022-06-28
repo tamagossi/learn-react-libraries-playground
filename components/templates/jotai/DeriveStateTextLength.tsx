@@ -1,17 +1,18 @@
+import React, { ChangeEvent, FC, ReactElement } from 'react';
 import { Input, InputGroup, InputLeftElement, Text, VStack } from '@chakra-ui/react';
 import { BiSearchAlt2 } from 'react-icons/bi';
-import React, { FC, ReactElement } from 'react';
 
+import { AtomSectionTitle } from 'components/atoms';
 import { useTextState } from 'hooks/state/jotai/text.state';
 
 const SimpleStateCounter: FC = (): ReactElement => {
-	const { text, setText, textLength } = useTextState();
+	const { text, changeText, textLength } = useTextState();
+
+	console.log('rerender');
 
 	return (
 		<VStack>
-			<Text fontSize="2xl" fontWeight="bold" mb="6">
-				Text Length with Derived State
-			</Text>
+			<AtomSectionTitle title="Text Length with Derived State" />
 
 			<InputGroup mb={5} w="50%">
 				<InputLeftElement pointerEvents="none">
@@ -21,7 +22,9 @@ const SimpleStateCounter: FC = (): ReactElement => {
 				<Input
 					type="text"
 					placeholder="Change text"
-					onChange={(event) => setText(event.target.value)}
+					onChange={(event: ChangeEvent<HTMLInputElement>) =>
+						changeText(event.target.value)
+					}
 				/>
 			</InputGroup>
 
