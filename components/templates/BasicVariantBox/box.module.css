@@ -1,0 +1,19 @@
+.box {
+	align-items: center;
+	background-color: aquamarine;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	height: 15rem;
+	justify-content: center;
+	width: 15rem;
+}
+
+.box-item {
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: white;
+	padding: 1rem;
+	list-style: none;
+	margin: 0.5rem;
+}

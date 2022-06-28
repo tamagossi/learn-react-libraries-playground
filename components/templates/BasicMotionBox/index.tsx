@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import styles from './box.module.css';
 
-const AtomBox = () => {
+const BasicMotionBox = () => {
 	const [isAnimating, setIsAnimating] = useState(false);
 
 	return (
@@ -25,4 +25,4 @@ const AtomBox = () => {
 	);
 };
 
-export default AtomBox;
+export default BasicMotionBox;

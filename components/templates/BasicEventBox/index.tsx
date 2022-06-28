@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import styles from './box.module.css';
 
-const AtomBox = () => {
+const BasicEventBox = () => {
 	return (
 		<motion.div
 			className={styles.box}
@@ -17,4 +17,4 @@ const AtomBox = () => {
 	);
 };
 
-export default AtomBox;
+export default BasicEventBox;

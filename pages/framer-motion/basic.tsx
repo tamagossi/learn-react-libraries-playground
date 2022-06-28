@@ -3,7 +3,7 @@ import { Box, Divider, Text, VStack } from '@chakra-ui/react';
 
 import { AtomSectionTitle } from 'components/atoms';
 import { Layout } from 'components/layouts';
-import { BasicEventBox, BasicMotionBox } from 'components/templates';
+import { BasicEventBox, BasicMotionBox, BasicVariantBox } from 'components/templates';
 
 const BasicFramerMotion = () => {
 	return (
@@ -15,6 +15,11 @@ const BasicFramerMotion = () => {
 
 			<AtomSectionTitle title="Basic Event Animation" />
 			<BasicEventBox />
+
+			<Divider mt={10} mb={10} />
+
+			<AtomSectionTitle title="Basic Variant" />
+			<BasicVariantBox />
 		</Layout>
 	);
 };
