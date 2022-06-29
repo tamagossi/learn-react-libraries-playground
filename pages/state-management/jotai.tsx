@@ -1,7 +1,12 @@
 import React, { FC, ReactElement } from 'react';
 import { Divider } from '@chakra-ui/react';
 
-import { SimpleStateCounter, DeriveStateTextLength, AsyncState } from 'components/templates';
+import {
+	SimpleStateCounter,
+	DeriveStateTextLength,
+	AsyncState,
+	SimplePersistentStateCounter,
+} from 'components/templates';
 import { Layout } from 'components/layouts';
 
 const JotaiPage: FC = (): ReactElement => {
@@ -12,6 +17,8 @@ const JotaiPage: FC = (): ReactElement => {
 			<DeriveStateTextLength />
 			<Divider mt={10} mb={10} />
 			<AsyncState />
+			<Divider mt={10} mb={10} />
+			<SimplePersistentStateCounter />
 		</Layout>
 	);
 };

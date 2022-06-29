@@ -9,8 +9,8 @@ const CounterModificationButton: FC = (): ReactElement => {
 	return (
 		<>
 			<HStack>
-				<Button onClick={() => setCount((prev) => prev - 1)}>-</Button>
-				<Button onClick={() => setCount((prev) => prev + 1)}>+</Button>
+				<Button onClick={() => setCount((prev: number) => prev - 1)}>-</Button>
+				<Button onClick={() => setCount((prev: number) => prev + 1)}>+</Button>
 			</HStack>
 		</>
 	);
