@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, Text, VStack, Grid, Flex } from '@chakra-ui/react';
-import { FcBullish, FcBusinesswoman, FcSerialTasks, FcSportsMode } from 'react-icons/fc';
+import { FcBullish, FcBusinesswoman, FcGallery, FcSerialTasks, FcSportsMode } from 'react-icons/fc';
 
 import { AtomColorModeSwitcher, AtomFeatureBox, AtomLogo } from 'components/atoms';
 import { Feature } from 'interfaces/features.interface';
@@ -28,6 +28,12 @@ const FEATURES: Feature[] = [
 		path: '/framer-motion/basic',
 		title: 'Basic Motion',
 		icon: FcSportsMode,
+		tags: ['framer-motion'],
+	},
+	{
+		path: '/framer-motion/slider',
+		title: 'Framer Slider',
+		icon: FcGallery,
 		tags: ['framer-motion'],
 	},
 ];
